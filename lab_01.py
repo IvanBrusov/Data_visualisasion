@@ -92,10 +92,10 @@ from matplotlib import cm
 #
 # plt.show()
 
-# Task 5
+# Task 5 2D
 
 # years = [1900, 1913, 1929, 1938, 1950, 1960, 1970, 1980, 1990, 2000]
-# countries = ['Германия', 'Франция', 'Великобритания', 'СССР']
+# countries = ['Германія', 'Франція', 'Великобританія', 'СССР']
 # germany_values = [29, 51, 59, 478, 93, 244, 420, 510, 575, 625]
 # france_values = [28, 46, 57, 52, 63, 93, 190, 275, 310, 355]
 # uk_values = [53, 73, 84, 105, 130, 180, 245, 265, 300, 335]
@@ -117,4 +117,42 @@ from matplotlib import cm
 # ax.legend()
 #
 # plt.tight_layout()
+# plt.show()
+
+# Task 5 3D
+
+# fig = plt.figure()
+# ax = plt.axes(projection="3d")
+# 
+# countries = [" ", " ","Германія", " ", "Франція", " ", "Великобританія", " ", "СРСР"]
+# data = np.array([[29, 51, 59, 478, 93, 244, 420, 510, 575, 625],
+#                  [28, 46, 57, 52, 63, 93, 190, 275, 310, 355],
+#                  [53, 73, 84, 105, 130, 180, 245, 265, 300, 335],
+#                  [40, 70, 80, 105, 205, 480, 725, 935, 1000, 545]])
+# years = [1900, 1913, 1929, 1938, 1950, 1960, 1970,  1980, 1990, 2000]
+# numOfCols = 10
+# numOfRows = 4
+# 
+# xpos = np.arange(0, numOfCols, 1)
+# ypos = np.arange(0, numOfRows, 1)
+# xpos, ypos = np.meshgrid(xpos + 0.5, ypos + 0.5)
+# 
+# 
+# xpos = xpos.flatten()
+# ypos = ypos.flatten()
+# zpos = np.zeros(numOfCols * numOfRows)
+# 
+# dx = np.ones(numOfRows * numOfCols) * 0.5
+# dy = np.ones(numOfCols * numOfRows) * 0.5
+# dz = data.flatten()
+# 
+# ax.bar3d(xpos, ypos, zpos, dx, dy, dz)
+# index = np. arange(10)
+# ax. set_xticks(index + 8 / 9)
+# ax.set_xticklabels(years, fontsize=5)
+# ax.set_yticklabels(countries)
+# 
+# ax.set_xlabel('Роки')
+# ax.set_zlabel('млрд. дол')
+# 
 # plt.show()
