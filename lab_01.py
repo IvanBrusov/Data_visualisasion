@@ -30,18 +30,16 @@ from matplotlib import cm
 # plt.show()
 
 # Task 2
-
 # fig = plt.figure()
 # ax = fig.add_subplot(111, projection='3d')
 #
-# X = np.arange(-10, 10, 0.01)
-# Y = (2 + np.power(np.sin(X), 3)) / (1 + np.power(X, 2))
-#
+# X = np.arange(-10, 10, 0.1)
+# Y = np.arange(-10, 10, 0.1)
+# X, Y = np.meshgrid(X, Y)
 # Z = 10 * np.power(X, 3) * np.power(np.sin(Y), 2) - 2 * np.power(X, 2) * np.power(Y, 3)
-# surf = ax.plot_trisurf(X, Y, Z, cmap='viridis',
-#                        linewidth=0, antialiased=False)
-# fig.colorbar(surf, shrink=0.5, aspect=5)
 #
+# surf = ax.plot_surface(X, Y, Z, cmap='viridis')
+# fig.colorbar(surf, shrink=0.5, aspect=5)
 # plt.title("$z = 10x^3sin^2(y)-2x^2y^3$", fontsize=15)
 # plt.xlabel("X")
 # plt.ylabel("Y")
